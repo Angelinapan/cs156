@@ -1,3 +1,10 @@
+# Final Exam:
+# This program explores Radial Basis Functions, both in regular form
+# (Lloyd algorithm + pseudo-inverse) and in kernel form (using the RBF
+# kernel in hard-margin SVM). Input space is X = [-1,1]x[-1,1] with uniform
+# probability distribution, and target is:
+# 			f(x) = sign(x2 - x1 + 0.25*sin(pi*x1))
+
 from math import sin, pi, exp
 from random import random
 import numpy as np
@@ -33,6 +40,7 @@ def gen_points(N):
 		train_y.append(target(x1, x2))
 	return np.array(train_x), np.array(train_y)
 
+# RBF model in kernel form.
 def kernel_RBF(X, Y, g):
 	clf = SVC(C=10**6, kernel='rbf', gamma=g)
 	clf.fit(X,Y)
@@ -52,6 +60,7 @@ def kernel_RBF(X, Y, g):
 	# For E_in and E_out:
 	return clf.fit_status_, float(count) / 1000
 
+# RBF model in regular form (Lloyd + pseudo-inverse)
 def reg_RBF(X, Y, g, M, K):
 	# Lloyd's Algorithm to find centres:
 

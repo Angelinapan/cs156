@@ -1,3 +1,8 @@
+# SET 7:
+# A program that simulates e1, e2 as independent random variables distributed
+# uniformly over the interval [0,1], and e as min(e1, e2). Calculate expected
+# values of e1, e2, e.
+
 import math
 from random import uniform
 

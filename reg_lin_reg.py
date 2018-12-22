@@ -1,3 +1,7 @@
+# Final Exam:
+# Linear regressiong for classification on processed US Postal Service Zip Code
+# data set. We train two types of binary classifiers: one-vs-one and one-vs-all.
+
 from math import fabs, log, tan, exp
 import numpy as np
 

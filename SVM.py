@@ -1,3 +1,7 @@
+# SET 7:
+# We will compare PLA to SVM with hard margin on linearly separable data sets.
+# NB: this program needs tweaking and does not give correct results.
+
 import numpy as np
 from cvxopt import matrix
 from cvxopt import solvers

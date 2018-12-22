@@ -1,4 +1,5 @@
-# TESTING UPDATE
+# SET 1:
+# This program explores how the Perceptron Learning Algorithm works.
 
 import math
 from random import random
@@ -22,7 +23,7 @@ def getF(x1, y1, x2, y2):
 	b = (x1*y2 - x2*y1) / (x1-x2)
 	return [m, b]
 
-
+# Implements the Perceptron Learning Algorithm for d = 2 on a linear data set.
 def PLA(N):
 	# Generate two random points in [-1, 1] x [-1. 1]
 	x1 = random()*2-1

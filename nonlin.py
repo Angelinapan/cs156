@@ -1,3 +1,8 @@
+# SET 2:
+# This program applies Linear Regression for classification to a nonlinear 
+# transformation for the target function:
+# 			f(x1, x2) = sign(x1^2 + x2^2 - 0.6)
+
 import math
 from random import random
 import numpy as np

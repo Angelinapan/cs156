@@ -1,3 +1,9 @@
+# SET 5:
+# Creating a target function f (probability) and data set D to see how
+# Logistic Regression works. f is a 0/1 probability so y is a deterministic
+# function of x. Let X = [-1,1]x[-1,1] with uniform probability of picking
+# each x \in X.
+
 from math import exp, sqrt, e, log
 import numpy as np
 from random import random, shuffle
@@ -21,6 +27,7 @@ def getF(x1, y1, x2, y2):
 	b = (x1*y2 - x2*y1) / (x1-x2)
 	return m, b
 
+# Run logistic regression with stochastic gradient descent to find g.
 def log_reg(N, n):
 	# Generate two random points in [-1, 1] x [-1, 1]
 	x1 = random()*2-1

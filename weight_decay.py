@@ -1,3 +1,8 @@
+# SET 6:
+# Exploring regularization with weight decay. We are going to apply linear
+# regression with a non-linear transformation for classification, comparing
+# the in and out sample errors with and without weight decay.
+
 from math import fabs, log, tan, exp
 import numpy as np
 

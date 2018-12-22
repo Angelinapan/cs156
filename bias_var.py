@@ -1,8 +1,14 @@
+# SET 4:
+# Exploring the bias-variance model. Assume that training set has only two
+# examples (independent) and that the learning algorithm produces the
+# hypothesis that minimizes the mean squared error on the examples.
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from random import random
 
+# Target function
 def f(x):
 	return np.sin(np.pi * x)
 

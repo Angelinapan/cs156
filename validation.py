@@ -1,3 +1,9 @@
+# SET 7:
+# This program applies linear regression with a nonlinear transformation for
+# classification (without regularization). We are going to explore how
+# taking out points for validation affects the learning performance by
+# considering the hypotheses trained on the training set.
+
 from math import fabs, log, tan, exp
 import numpy as np
 

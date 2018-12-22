@@ -1,3 +1,7 @@
+# SET 2:
+# This program explores how Linear Regression for classification works,
+# using an input set of X = [-1, 1] x [-1, 1]. 
+
 import math
 from random import random
 import numpy as np
@@ -21,6 +25,7 @@ def getF(x1, y1, x2, y2):
 	b = (x1*y2 - x2*y1) / (x1-x2)
 	return [m, b]
 
+# Use linear regression on input set [-1, 1] x [-1. 1] and target function f.
 def LinReg(N):
 	# Generate two random points in [-1, 1] x [-1. 1]
 	x1 = random()*2-1
@@ -64,6 +69,8 @@ def LinReg(N):
 	return (float(count) / 100.0), (float(count2) / 1000.0)
 
 
+# Uses weights from Linear Regression as the vector of initial weights for
+# the Perceptron Learning Algorithm.
 def PLA(N):
 	# Generate two random points in [-1, 1] x [-1. 1]
 	x1 = random()*2-1
@@ -138,7 +145,9 @@ def main():
 		s1 += values[0]
 		s2 += values[1]
 
+	# finds average E_in
 	print("E_in:", s1 / 1000.0)
+	# finds average E_out
 	print("E_out:", s2 / 1000.0)
 
 	# for Q7:
@@ -146,6 +155,7 @@ def main():
 	s3 = 0
 	for i in range(1000):
 		s3 += PLA(10)
+	# finds average number of iterations that PLA takes to converge
 	print("iterations:", float(s3)/1000.0)
 
 if __name__ == "__main__":
